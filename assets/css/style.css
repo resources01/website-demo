@@ -11074,7 +11074,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  font-family: 'Baloo Paaji', cursive;
+  font-family: "Concert One", sans-serif;
   color: #fff;
 }
 
@@ -11640,6 +11640,7 @@ pre .code {
   font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1300 - 300)));
   text-decoration: none;
   color: #fff;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 .custom-navbar .container {
@@ -11719,7 +11720,7 @@ pre .code {
 }
 
 .custom-navbar.affix .nav .item .link {
-  color: #fff;
+  color: #6c757d;
 }
 
 .custom-navbar.affix .hamburger-inner, .custom-navbar.affix .hamburger-inner::before, .custom-navbar.affix .hamburger-inner::after {
