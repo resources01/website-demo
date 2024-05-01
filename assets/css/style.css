@@ -162,13 +162,13 @@ sup {
 }
 
 a {
-  color: #695aa6;
+  color: #fff;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #493f75;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -12089,7 +12089,7 @@ pre .code {
 }
 
 .header .header-content .header-title .up {
-  font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1300 - 300)));
+  font-size: 30px;
   font-weight: 500;
   color: #fff;
   margin-bottom: 5px;
@@ -12239,6 +12239,7 @@ pre .code {
   background: #181818;
   padding: 10px;
   position: relative;
+  box-shadow : 3px 2px 8px 2px #000;
 }
 
 .row.select .item:hover {
@@ -12259,7 +12260,7 @@ pre .code {
 
 @media (min-width: 1200px) {
   .row.select a {
-    max-height: 800px;
+    max-height: 600px;
   }
 }
 
