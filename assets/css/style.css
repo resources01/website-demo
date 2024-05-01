@@ -12244,8 +12244,22 @@ pre .code {
   background: #181818;
 }
 
-.row.select a {
-  max-height: 600px;
+@media (max-width: 992px) {
+  .row.select .py-3 {
+    padding: 0px 0px 0px 0px !important;
+  }
+}
+
+@media (min-width: 320px) {
+  .row.select a {
+    max-height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row.select a {
+    max-height: 800px;
+  }
 }
 
 .item:hover .live {
