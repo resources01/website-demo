@@ -11244,9 +11244,6 @@ p {
 }
 
 @media (max-width: 767.98px) {
-  .portfolio-card {
-    margin-bottom: 30px;
-  }
   .service-card {
     margin-bottom: 30px;
   }
@@ -12254,13 +12251,25 @@ pre .code {
 
 @media (min-width: 320px) {
   .row.select a {
-    max-height: 500px;
+    max-height: 600px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 767px) {
+  .row.select a {
+    max-height: 400px;
+  }
+}
+
+@media (min-width: 1400px) {
   .row.select a {
     max-height: 600px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .row.select a {
+    max-height: 800px;
   }
 }
 
