@@ -11637,7 +11637,7 @@ pre .code {
   font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1300 - 300)));
   text-decoration: none;
   color: #fff;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .custom-navbar .container {
