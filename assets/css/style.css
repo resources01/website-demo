@@ -12257,17 +12257,17 @@ pre .code {
 
 @media (min-width: 767px) {
   .row.select a {
-    max-height: 480px;
+    max-height: 400px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1400px) {
   .row.select a {
     max-height: 600px;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .row.select a {
     max-height: 800px;
   }
