@@ -2193,9 +2193,9 @@ pre code {
 .form-control:focus {
   color: #495057;
   background-color: rgba(0, 0, 0, 0.01);
-  border-color: #b4add3;
+  border-color: #fff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(242, 239, 255, 0.25);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -3043,14 +3043,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #695aa6;
-  border-color: #695aa6;
+  color: #fff;
+  border-color: #ced4da;
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #695aa6;
-  border-color: #695aa6;
+  background-color: #2b2b2b;
+  border-color: #fff;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {

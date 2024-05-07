@@ -19,6 +19,18 @@
 
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- send mail -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "BPLzs_2u5cn6tHKun",
+        });
+    })();
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -73,7 +85,7 @@
     </header>
     <!-- end of page header -->    
 
-    <!-- contact section -->
+    <!-- templete section -->
     <section class="section" id="category">
         <div class="container-fluid text-center">
             <p class="section-subtitle">The best choice for you</p>
@@ -181,7 +193,38 @@
             
         </div>
     </section>
-    <!-- end of contact section -->    
+    <!-- end of templete section -->    
+
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            
+            <form onsubmit="sendEmail(); reset(); return false" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input id="firstName" type="text" size="50" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input id="lastName" type="text" size="50" class="form-control" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input id="phone" type="text" maxlength="15" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input id="email" type="email" class="form-control" placeholder="Email" requried>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <textarea id="message" name="message" rows="6" class="form-control" placeholder="Write Something"></textarea>
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input id="btn" type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section><!-- end of contact section -->
 
     <!-- footer -->
     <footer class="footer px-5">
@@ -208,6 +251,46 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        function sendEmail() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var name = firstName + " " + lastName;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var isValid = true;
+
+            // Check phone and email
+            var isphone = /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(phone);
+            if(isphone == false){
+                alert("Please re-enter your phone number!");
+                isValid = false;
+            } else if(email == ''){ 
+                alert("Please enter your email!");
+                isValid = false;
+            }
+
+            if(isValid) {
+                var contactInfo = {
+                name: name,
+                phone: phone,
+                email: email,
+                message: message
+                };
+
+                emailjs.send('service_htcttai', 'template_5rxygvc', contactInfo).then(
+                    (response) => {
+                        alert('Information has been sent successfully \n\ We will get back to you soon!');
+                    },
+                    (error) => {
+                        alert('FAILED...', error);
+                    },
+                );
+            }
+        }
+    </script>
 
 </body>
 
