@@ -739,6 +739,22 @@
         .fail(fail_func);
     });
 
+    $(document).ready(function(){
+        //scroll to top
+        var btnHome = $('#button-home');
+        var btnHotline = $('#button-hotline');
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btnHome.addClass('show');
+                btnHotline.addClass('show');
+            } else {
+                btnHome.removeClass('show');
+                btnHotline.removeClass('show');
+            }
+        });
+    });
+
+
     //  Scroll back to top
     var progressPath = document.querySelector('.progress-wrap path');
     var pathLength = progressPath.getTotalLength();

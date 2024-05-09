@@ -172,8 +172,12 @@
       var scroll = $(window).scrollTop();
       if (scroll < 245) {
         $(".header-sticky").removeClass("sticky-bar");
+        $("#button-home").removeClass("show");
+        $("#button-hotline").removeClass("show");
       } else {
         $(".header-sticky").addClass("sticky-bar");
+        $("#button-home").addClass("show");
+        $("#button-hotline").addClass("show");
       }
     });
 

@@ -101,12 +101,18 @@
    * Back to top button
    */
   let backtotop = select('.back-to-top')
+  let btnHome = select('#button-home')
+  let btnHotline = select('#button-hotline')
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         backtotop.classList.add('active')
+        btnHome.classList.add('show')
+        btnHotline.classList.add('show')
       } else {
         backtotop.classList.remove('active')
+        btnHome.classList.remove('show')
+        btnHotline.classList.remove('show')
       }
     }
     window.addEventListener('load', toggleBacktotop)

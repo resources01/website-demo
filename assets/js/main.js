@@ -38,20 +38,28 @@ $('#nav-toggle').click(function(){
 });
 
 //scroll to top
-var btn = $('#button-top');
+var btnTop = $('#button-top');
+var btnHome = $('#button-home');
+var btnHotline = $('#button-hotline');
+
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
+    btnTop.addClass('show');
+    btnHome.addClass('show');
+    btnHotline.addClass('show');
   } else {
-    btn.removeClass('show');
+    btnTop.removeClass('show');
+    btnHome.removeClass('show');
+    btnHotline.removeClass('show');
   }
 });
 
-btn.on('click', function(e) {
+btnTop.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '1200');
 });
+
 
 
   

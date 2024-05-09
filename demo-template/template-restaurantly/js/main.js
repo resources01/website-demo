@@ -23,8 +23,12 @@
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow');
+            $('#button-home').addClass('show');
+            $('#button-hotline').addClass('show');
         } else {
             $('.back-to-top').fadeOut('slow');
+            $('#button-home').removeClass('show');
+            $('#button-hotline').removeClass('show');
         }
     });
     $('.back-to-top').click(function () {

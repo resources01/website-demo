@@ -46,6 +46,28 @@
         $(window).resize(toggleNavbarMethod);
     });
 
+    $(document).ready(function(){
+        //scroll to top
+        var btnTop = $('#button-top');
+        var btnHome = $('#button-home');
+        var btnHotline = $('#button-hotline');
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btnTop.addClass('show');
+                btnHome.addClass('show');
+                btnHotline.addClass('show');
+            } else {
+                btnTop.removeClass('show');
+                btnHome.removeClass('show');
+                btnHotline.removeClass('show');
+            }
+        });
+        btnTop.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '1200');
+        });
+    });
+
 
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({
