@@ -32,9 +32,18 @@ $(document).ready(function(){
 });
 
 // navbar toggle
+$('.changeLanguage').click(function(){
+  $('.en').toggleClass('d-none');
+  $('.vn').toggleClass('d-none');
+  $('.language-V').toggleClass('d-none');
+  $('.language-E').toggleClass('d-none');
+});
+
+// navbar toggle
 $('#nav-toggle').click(function(){
-    $(this).toggleClass('is-active')
+    $(this).toggleClass('is-active');
     $('ul.nav').toggleClass('show');
+    $('.change-language').toggleClass('disa');
 });
 
 //scroll to top

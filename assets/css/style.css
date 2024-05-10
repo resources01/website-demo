@@ -2771,7 +2771,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
+  color: #fff !important;
   background-color: #2b2b2b;
   border-color: #393939;
 }
@@ -11634,7 +11634,7 @@ pre .code {
 }
 
 .custom-navbar .logo {
-  font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1300 - 300)));
+  font-size: 22px;
   text-decoration: none;
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -11894,7 +11894,8 @@ pre .code {
     position: absolute;
     top: calc(100% + 1px);
     left: 0;
-    background: #fff;
+    line-height: 50px;
+    background: #242424;
     border-radius: 0 0 0 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -12157,6 +12158,12 @@ pre .code {
   }
 }
 
+@media (max-width: 400px) {
+  .header-content .btn a {
+    font-size: 14px !important;
+  }
+}
+
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12353,6 +12360,68 @@ pre .code {
   opacity: 1;
   visibility: visible;
 }
+
+/* button change language */
+
+.change-language {
+  color: #fff !important;
+  border-bottom: solid 1px #fff;
+  padding: 0px 3px;
+  position: relative;
+  margin-bottom: 5px;
+  animation: moveAndAppear 1.5s forwards;
+}
+
+@media (max-width: 450px) {
+  .change-language {
+    margin-left: 40% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .change-language {
+    margin-left: 68%;
+  }
+}
+
+.change-language.disa {
+  animation: moveAndDisappear 1.5s forwards;
+}
+
+@keyframes moveAndAppear {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveAndDisappear {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+.change-language:hover {
+  color: #fff !important;
+  border: solid 1px #fff;
+  padding: 0px 3px;
+}
+
+.section-title.vn {
+  font-family: "Coiny", system-ui !important;
+  font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1300 - 300)));;
+  font-weight: 100;
+}
+
 
 
 /* END CSS */

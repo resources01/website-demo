@@ -7,11 +7,11 @@
     <meta name="description" content="Alo đi.. đẹp mà rẻ lắm.. hứa lun.. thề..!">
     <meta name="author" content="Website Nè">
     <meta property="og:image" content="assets/images/websitene-thumbnail.jpg">
+    <link rel="icon" href="assets/images/website-favicon.svg">
     <title>Website Nè</title>
 
     <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Jersey+15+Charted&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -19,7 +19,12 @@
     
     <!-- Bootstrap + main styles HOME-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
+
 
     <!-- send mail -->
     <script type="text/javascript"
@@ -41,9 +46,9 @@
         <div class="container">
             <a class="logo" href="index.html">websitene.com</a>
             <ul class="nav">
-                <li class="item">
-                    <a class="link" href="index.html">Home</a>
-                </li>
+                <li class="item ml-md-3">
+                    <a href="index.html" class="btn btn-primary"><span class="vn  d-none">Trang chủ</span><span class="en">Home</span></a>
+                </li>                
                 <!-- <li class="item">
                     <a class="link" href="#about">About</a>
                 </li>
@@ -60,9 +65,13 @@
                     <a class="link" href="#contact">Contact</a>
                 </li> -->
                 <li class="item ml-md-3">
-                    <a href="tel:+84966923719" class="btn btn-primary">Appointment</a>
+                    <a href="tel:+84966923719" class="btn btn-primary"><span class="vn  d-none">Liên hệ</span><span class="en">Appointment</span></a>
+                </li>
+                <li class="item ml-md-3">
+                    <a class="btn btn-primary changeLanguage"><span class="vn  d-none">VN</span><span class="en">EN</span></a>
                 </li>
             </ul>
+            <a class="change-language changeLanguage" href="#"><span class="vn  d-none">VN</span><span class="en">EN</span></a>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
                     <div class="hamburger-inner"></div>
@@ -74,14 +83,32 @@
     <!-- page header -->
     <header id="home" class="header">
         <div class="overlay"></div>
-        <div class="header-content container">
+        <div class="header-content container language-V d-none">
             <h1 class="header-title">
-                <span class="up">Chào.....</span>
-                <span class="down">Website nè</span>
+                <span class="up">Chào...</span>
+                <span class="down" >Website nè</span>
             </h1>
-            <p class="header-subtitle">THESE ARE MY BEST DESIGNER</p>
+            <p class="header-subtitle">Bản thiết kế hoàn hảo mà bạn đang tìm đây!</p>
 
-            <button class="btn btn-primary"><a href="tel:+84966923719"><b><i class="ti-apple"></i></b> Alo đi.. đẹp mà rẻ lắm.. hứa lun.. thề..!</a></button>
+            <button class="btn btn-primary">
+                <a href="tel:+84966923719">
+                    <b><i class="ti-apple"></i></b> Alo đi.. đẹp mà rẻ lắm.. hứa lun.. thề..!
+                </a>
+            </button>
+        </div>
+
+        <div class="header-content container language-E">
+            <h1 class="header-title">
+                <span class="up">Hi...</span>
+                <span class="down" >Website nè</span>
+            </h1>
+            <p class="header-subtitle">THESE ARE MY BEST DESIGN</p>
+
+            <button class="btn btn-primary">
+                <a href="tel:+84966923719">
+                    <b><i class="ti-apple"></i></b> Alo đi.. đẹp mà rẻ lắm.. hứa lun.. thề..!
+                </a>
+            </button>
         </div>
     </header>
     <!-- end of page header -->    
@@ -89,8 +116,10 @@
     <!-- templete section -->
     <section class="section" id="category">
         <div class="container-fluid text-center">
-            <p class="section-subtitle">The best choice for you</p>
-            <h6 class="section-title mb-5">My Design</h6>
+            <p class="section-subtitle vn  d-none">Sự chọn lựa tốt nhất dành cho bạn</p>
+            <h6 class="section-title mb-5 vn  d-none">Những thiết kế của tôi</h6>
+            <p class="section-subtitle en">The best choice for you</p>
+            <h6 class="section-title mb-5 en">Our Design</h6>
                 <div class="row select">
                     
                     <div class="col-lg-4 col-md-6 py-3 mb-3">
@@ -99,7 +128,8 @@
                                 <img src="assets/images/luxurynailbardenton.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/luxurynailbardenton/index.html">Live Review</a>
+                                <a class="en" target="_blank" href="demo-template/luxurynailbardenton/index.html">Live Review</a>
+                                <a class="vn  d-none" target="_blank" href="demo-template/luxurynailbardenton/index.html">Xem Ngay</a>
                             </div>  
                         </div>
                     </div>
@@ -110,7 +140,8 @@
                                 <img src="assets/images/vickynailsandspa.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/vickynailsandspa/index.html">Live Review</a>
+                                <a class="en" target="_blank" href="demo-template/vickynailsandspa/index.html">Live Review</a>
+                                <a class="vn  d-none" target="_blank" href="demo-template/vickynailsandspa/index.html">Xem Ngay</a>
                             </div>  
                         </div>
                     </div>
@@ -121,7 +152,8 @@
                                 <img src="assets/images/website-ne-demo-02.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/demo-restaurants/index.html">Live Review</a>
+                                <a  class="en" target="_blank" href="demo-template/demo-restaurants/index.html">Live Review</a>
+                                <a  class="vn  d-none" target="_blank" href="demo-template/demo-restaurants/index.html">Xem Ngay</a>
                             </div>  
                         </div>               
                     </div>
@@ -132,7 +164,8 @@
                                 <img src="assets/images/dosun.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/dosun/index.html">Live Review</a>
+                                <a class="en" target="_blank" href="demo-template/dosun/index.html">Live Review</a>
+                                <a class="vn  d-none" target="_blank" href="demo-template/dosun/index.html">Xem Ngay</a>
                             </div>  
                         </div>               
                     </div>
@@ -143,7 +176,8 @@
                                 <img src="assets/images/website-ne-demo-04.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/Grand-Nail-Spa/index.html">Live Review</a>
+                                <a class="en" target="_blank" href="demo-template/Grand-Nail-Spa/index.html">Live Review</a>
+                                <a class="vn  d-none" target="_blank" href="demo-template/Grand-Nail-Spa/index.html">Xem Ngay</a>
                             </div>  
                         </div>
                     </div>
@@ -154,7 +188,8 @@
                                 <img src="assets/images/website-ne-demo-01.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/template-restaurantly/index.html">Live Review</a>
+                                <a class="en" target="_blank" href="demo-template/template-restaurantly/index.html">Live Review</a>
+                                <a class="vn  d-none" target="_blank" href="demo-template/template-restaurantly/index.html">Xem Ngay</a>
                             </div>  
                         </div>               
                     </div>                      
@@ -164,7 +199,8 @@
                                 <img src="assets/images/website-ne-demo-05.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/constructioncompany-master/index.html">Live Review</a>
+                                <a class="en" target="_blank" href="demo-template/constructioncompany-master/index.html">Live Review</a>
+                                <a class="vn  d-none" target="_blank" href="demo-template/constructioncompany-master/index.html">Xem Ngay</a>
                             </div>  
                         </div>               
                     </div>
@@ -174,7 +210,8 @@
                                 <img src="assets/images/website-ne-demo-06.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/Noire-Nail-Bar/index.html">Live Review</a>
+                                <a class="en" target="_blank" href="demo-template/Noire-Nail-Bar/index.html">Live Review</a>
+                                <a class="vn  d-none" target="_blank" href="demo-template/Noire-Nail-Bar/index.html">Xem Ngay</a>
                             </div>  
                         </div>               
                     </div>  
@@ -184,7 +221,8 @@
                                 <img src="assets/images/milanonailspaspring.jpg" class="portfolio-card-img">
                             </a>      
                             <div class="live">
-                                <a target="_blank" href="demo-template/milanonailspaspring/index.html">Live Review</a>
+                                <a class="en" target="_blank" href="demo-template/milanonailspaspring/index.html">Live Review</a>
+                                <a class="vn  d-none" target="_blank" href="demo-template/milanonailspaspring/index.html">Xem Ngay</a>
                             </div>  
                         </div>               
                     </div>                     
@@ -198,9 +236,37 @@
 
     <!-- contact section -->
     <section class="section" id="contact">
-        <div class="container text-center">
-            <p class="section-subtitle">How can you communicate?</p>
-            <h6 class="section-title mb-5">Contact Me</h6>
+        <div class="container text-center vn  d-none">
+            <p class="section-subtitle vn  d-none">Bạn vẫn chưa chọn được mẫu thiết kế hợp ý?</p>
+            <h6 class="section-title mb-5 vn  d-none">Liên hệ chúng tôi ngay</h6>
+            
+            <form onsubmit="sendEmail(); reset(); return false" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input id="firstName" type="text" size="50" class="form-control" placeholder="Tên" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input id="lastName" type="text" size="50" class="form-control" placeholder="Họ" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input id="phone" type="text" maxlength="15" class="form-control" placeholder="Số điện thoại" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input id="email" type="email" class="form-control" placeholder="Email" requried>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <textarea id="message" name="message" rows="6" class="form-control" placeholder="Lời nhắn..."></textarea>
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input id="btn" type="submit" value="Gửi " class="btn btn-outline-primary rounded">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container text-center en">
+            <p class="section-subtitle ">How can you communicate?</p>
+            <h6 class="section-title mb-5 ">Contact Us</h6>
             
             <form onsubmit="sendEmail(); reset(); return false" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
@@ -243,12 +309,12 @@
     <a class="btn-scroll" id="button-top"><i class="ti-arrow-up"></i></a>
 
     <!-- Button control -->
-    <a class="btn-scroll" id="button-home" href="index.html"><i class="ti-home"></i></a>
+    <!-- <a class="btn-scroll" id="button-home" href="index.html"><i class="ti-home"></i></a>
     <a class="btn-scroll" id="button-hotline" href="tel:+84966923719">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
         </svg>
-    </a>
+    </a> -->
     
      <!-- end of page footer -->
     <!-- core  -->
