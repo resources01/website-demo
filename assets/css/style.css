@@ -12305,6 +12305,8 @@ pre .code {
   border: solid 1px #fff;
 }
 
+/* Button control */
+
 .btn-scroll {
   display: inline-block;
   background-color: #000;
@@ -12360,6 +12362,8 @@ pre .code {
   opacity: 1;
   visibility: visible;
 }
+
+/* End Button control */
 
 /* button change language */
 
