@@ -46,7 +46,7 @@ $('#nav-toggle').click(function(){
     $('.change-language').toggleClass('disa');
 });
 
-//scroll to top
+//button control
 var btnTop = $('#button-top');
 var btnHome = $('#button-home');
 var btnHotline = $('#button-hotline');
@@ -68,6 +68,8 @@ btnTop.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '1200');
 });
+
+//end button control
 
 
 
