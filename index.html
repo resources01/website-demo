@@ -117,7 +117,7 @@
     <section class="section" id="category">
         <div class="container-fluid text-center">
             <p class="section-subtitle vn  d-none">Sự chọn lựa tốt nhất dành cho bạn</p>
-            <h6 class="section-title mb-5 vn  d-none">Những thiết kế của tôi</h6>
+            <h6 class="section-title mb-5 vn  d-none">Những thiết kế của chúng tôi</h6>
             <p class="section-subtitle en">The best choice for you</p>
             <h6 class="section-title mb-5 en">Our Design</h6>
                 <div class="row select">
@@ -272,51 +272,23 @@
 
     <!-- contact section -->
     <section class="section" id="contact">
-        <div class="container text-center vn  d-none">
-            <p class="section-subtitle vn  d-none">Bạn vẫn chưa chọn được mẫu thiết kế hợp ý?</p>
-            <h6 class="section-title mb-5 vn  d-none">Liên hệ chúng tôi ngay</h6>
-            
-            <form onsubmit="sendEmail(); reset(); return false" class="contact-form col-md-10 col-lg-8 m-auto">
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <input id="firstName" type="text" size="50" class="form-control" placeholder="Tên" required>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <input id="lastName" type="text" size="50" class="form-control" placeholder="Họ" required>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <input id="phone" type="text" maxlength="15" class="form-control" placeholder="Số điện thoại" required>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <input id="email" type="email" class="form-control" placeholder="Email" requried>
-                    </div>
-                    <div class="form-group col-sm-12">
-                        <textarea id="message" name="message" rows="6" class="form-control" placeholder="Lời nhắn..."></textarea>
-                    </div>
-                    <div class="form-group col-sm-12 mt-3">
-                        <input id="btn" type="submit" value="Gửi " class="btn btn-outline-primary rounded">
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="container text-center en">
+        <div class="container text-center">
             <p class="section-subtitle ">How can you communicate?</p>
             <h6 class="section-title mb-5 ">Contact Us</h6>
             
             <form onsubmit="sendEmail(); reset(); return false" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input id="firstName" type="text" size="50" class="form-control" placeholder="First Name" required>
-                    </div>
+                        <input id="Name" type="text" size="50" class="form-control" placeholder="Name" required>
+                    </div>                    
                     <div class="form-group col-sm-6">
-                        <input id="lastName" type="text" size="50" class="form-control" placeholder="Last Name" required>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <input id="phone" type="text" maxlength="15" class="form-control" placeholder="Phone Number" required>
+                        <input id="phone" type="text" maxlength="15" class="form-control" placeholder="Phone" required>
                     </div>
                     <div class="form-group col-sm-6">
                         <input id="email" type="email" class="form-control" placeholder="Email" requried>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input id="about" type="text" size="50" class="form-control" placeholder="About" required>
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea id="message" name="message" rows="6" class="form-control" placeholder="Write Something"></textarea>
@@ -365,16 +337,22 @@
 
     <script>
         function sendEmail() {
-            var firstName = document.getElementById("firstName").value;
-            var lastName = document.getElementById("lastName").value;
-            var name = firstName + " " + lastName;
+            var name = document.getElementById("Name").value;
+            var about = document.getElementById("about").value;
             var phone = document.getElementById("phone").value;
             var email = document.getElementById("email").value;
             var message = document.getElementById("message").value;
             var isValid = true;
 
             // Check phone and email
-            var isphone = /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(phone);
+
+            
+
+
+            /* format phone 000-000-0000 */
+            const e164Regex = /^\+?[0-9\s\-]*$/;
+            var isphone = e164Regex.test(phone);
+
             if(isphone == false){
                 alert("Please re-enter your phone number!");
                 isValid = false;
@@ -388,6 +366,7 @@
                 name: name,
                 phone: phone,
                 email: email,
+                about: about,
                 message: message
                 };
 
