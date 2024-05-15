@@ -12303,6 +12303,7 @@ pre .code {
   padding: 5px 10px;
   color: #fff !important;
   border: solid 1px #fff;
+  border-radius: 3px;
 }
 
 /* Button control */
