@@ -309,4 +309,20 @@
         })
     });
 
+    //button control
+    var btnHome = $('#button-home');
+    var btnHotline = $('#button-hotline');
+
+
+    $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        btnHome.addClass('show');
+        btnHotline.addClass('show');
+    } else {
+        btnHome.removeClass('show');
+        btnHotline.removeClass('show');
+    }
+    });
+//end button control
+
 }(jQuery));

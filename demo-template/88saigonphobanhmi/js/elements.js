@@ -17,6 +17,31 @@
 
 ******************************/
 
+//button control
+var btnTop = $('#button-top');
+var btnHome = $('#button-home');
+var btnHotline = $('#button-hotline');
+
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btnTop.addClass('show');
+    btnHome.addClass('show');
+    btnHotline.addClass('show');
+  } else {
+    btnTop.removeClass('show');
+    btnHome.removeClass('show');
+    btnHotline.removeClass('show');
+  }
+});
+
+btnTop.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '1200');
+});
+
+//end button control
+
 $(document).ready(function()
 {
 	"use strict";

@@ -12332,13 +12332,14 @@ pre .code {
 }
 
 #button-home {
-  bottom: 35%;
-  left: 15px;
+  bottom: 23%;
+  line-height: 35px;
+  right: 15px;
 }
 
 #button-hotline {
-  bottom: 29%;
-  left: 15px;
+  bottom: 18%;
+  right: 15px;
   line-height: 35px;
 }
 
@@ -12426,6 +12427,8 @@ pre .code {
   font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1300 - 300)));;
   font-weight: 100;
 }
+
+
 
 
 
