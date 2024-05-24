@@ -598,7 +598,7 @@ a:hover {
   border-radius: 0;
 }
 
-@media (min-width: 2360px) {
+@media (min-width: 2400px) {
   #hero {
     background-attachment: fixed;
   }
