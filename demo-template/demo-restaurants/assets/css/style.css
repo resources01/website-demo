@@ -598,6 +598,12 @@ a:hover {
   border-radius: 0;
 }
 
+@media (min-width: 2360px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
