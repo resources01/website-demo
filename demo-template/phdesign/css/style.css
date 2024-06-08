@@ -3299,7 +3299,7 @@ color: #fff;
     margin-bottom: 0;
 }
 .main-footer .sub-footer p a {
-    color: color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 .main-footer .sub-footer p a:hover {
     color: #c5a47e;
@@ -3491,7 +3491,7 @@ color: #fff;
     font-size: 17px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 400
+    font-weight: 400;
     outline: none;
 }
 .comming form button:hover {
@@ -3859,7 +3859,7 @@ color: #fff;
   #button-hotline {
     bottom: 29%;
     left: 15px;
-    line-height: 35px;
+    line-height: 42px;
   }
   
   .btn-scroll::after {
