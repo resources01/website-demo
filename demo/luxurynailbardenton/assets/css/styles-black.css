@@ -871,12 +871,12 @@ footer.entry-meta .meta-in {
 }
 
 #button-home {
-  bottom: 35%;
+  bottom: 250px;
   left: 15px;
 }
 
 #button-hotline {
-  bottom: 29%;
+  bottom: 200px;
   left: 15px;
   line-height: 35px;
 }

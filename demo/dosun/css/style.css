@@ -150,10 +150,10 @@ a:focus {
     background-attachment: fixed;
 }
 
-.100vh {
+/* .100vh {
     min-height: 100vh;
     overflow: hidden;
-}
+} */
 @media screen and (max-width: 991px) {
     .bg-fixed {
         background-attachment: scroll !important;
@@ -3837,12 +3837,12 @@ input[type="checkbox"] {
   }
   
   #button-home {
-    bottom: 35%;
+    bottom: 250px;
     left: 15px;
   }
   
   #button-hotline {
-    bottom: 29%;
+    bottom: 200px;
     left: 15px;
     line-height: 35px;
   }
