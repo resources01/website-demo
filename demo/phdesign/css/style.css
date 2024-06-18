@@ -1400,7 +1400,7 @@ float: left;
   display: inline-block;
 }
 .team .info p {
-  font-size: 17px;
+  font-size: 16px;
   margin-top: 0px;
 }
 .team .info .social {
@@ -3852,12 +3852,12 @@ color: #fff;
   }
   
   #button-home {
-    bottom: 35%;
+    bottom: 250px;
     left: 15px;
   }
   
   #button-hotline {
-    bottom: 29%;
+    bottom: 200px;
     left: 15px;
     line-height: 42px;
   }
