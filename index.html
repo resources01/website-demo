@@ -276,8 +276,10 @@
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
-            <p class="section-subtitle ">How can you communicate?</p>
-            <h6 class="section-title mb-5 ">Contact Us</h6>
+            <p class="en d-none section-subtitle ">How can you communicate?</p>
+            <p class="vn section-subtitle ">Liên Hệ</p>
+            <h6 class="en d-none section-title mb-5 ">Contact Us</h6>
+            <h6 class="vn section-title mb-5 ">Liên hệ với chúng tôi</h6>
             
             <form onsubmit="sendEmail(); reset(); return false" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
@@ -355,14 +357,14 @@
 
             // Check phone and email
 
-            
+            const vnPhoneRegex = /^(0|\+84)(3|5|7|8|9)[0-9]{8}$/;
+            const cleanPhone = phone.replace(/\s|-/g, '');
 
 
-            /* format phone 000-000-0000 */
-            const e164Regex = /^\+?[0-9\s\-]*$/;
-            var isphone = e164Regex.test(phone);
+            // const e164Regex = /^\+?[0-9\s\-]*$/;
+            // var isphone = e164Regex.test(phone);
 
-            if(isphone == false){
+            if(!vnPhoneRegex.test(cleanPhone)){
                 alert("Please re-enter your phone number!");
                 isValid = false;
             } else if(email == ''){ 
@@ -371,6 +373,12 @@
             }
 
             if(isValid) {
+
+                let normalizedPhone = cleanPhone;
+                if (normalizedPhone.startsWith('0')) {
+                    normalizedPhone = '+84' + normalizedPhone.slice(1);
+                }
+
                 var contactInfo = {
                 name: name,
                 phone: phone,
