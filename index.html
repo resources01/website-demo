@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Alo đi, đẹp mà rẻ lắm, hứa lun thề ! Website là nơi mọi sự bắt đầu.">
+    <meta name="description" content="Alo đi.. đẹp mà rẻ lắm.. hứa lun.. thề..!">
     <meta name="author" content="Website Nè">
     <meta property="og:image" content="assets/images/websitene-thumbnail.jpg">
     <link rel="icon" href="assets/images/website-favicon.svg">
@@ -264,6 +264,17 @@
                                 <a class="vn" target="_blank" href="demo/milanonailspaspring/index.html">Xem Ngay</a>
                             </div>  
                         </div>               
+                    </div>       
+                    <div class="col-lg-4 col-md-6 py-3 mb-3">
+                        <div class="item">
+                            <a class="portfolio-card">
+                                <img src="assets/images/website-ne-demo-13.jpg" class="portfolio-card-img">
+                            </a>      
+                            <div class="live">
+                                <a class="en d-none" target="_blank" href="demo/mibica-demo/index.html">Live Review</a>
+                                <a class="vn" target="_blank" href="demo/mibica-demo/index.html">Xem Ngay</a>
+                            </div>  
+                        </div>               
                     </div>                     
                 </div>
             </div>
@@ -276,10 +287,8 @@
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
-            <p class="en d-none section-subtitle ">How can you communicate?</p>
-            <p class="vn section-subtitle ">Liên Hệ</p>
-            <h6 class="en d-none section-title mb-5 ">Contact Us</h6>
-            <h6 class="vn section-title mb-5 ">Liên hệ với chúng tôi</h6>
+            <p class="section-subtitle ">How can you communicate?</p>
+            <h6 class="section-title mb-5 ">Contact Us</h6>
             
             <form onsubmit="sendEmail(); reset(); return false" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
@@ -308,7 +317,8 @@
 
     <!-- footer -->
     <footer class="footer px-5">
-            <p class="mb-0">Copyright 2024 <a href="https://websitene.com/">Website Nè. Designed by Website Nè</a> 
+            <p class="mb-0">Copyright
+                <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">Website Nè. Designed by Website Nè</a> 
             </p>
             <div class="social-links text-right m-auto ml-sm-auto">
                 <a href="" class="link"><i class="ti-facebook"></i></a>
@@ -356,14 +366,14 @@
 
             // Check phone and email
 
-            const vnPhoneRegex = /^(0|\+84)(3|5|7|8|9)[0-9]{8}$/;
-            const cleanPhone = phone.replace(/\s|-/g, '');
+            
 
 
-            // const e164Regex = /^\+?[0-9\s\-]*$/;
-            // var isphone = e164Regex.test(phone);
+            /* format phone 000-000-0000 */
+            const e164Regex = /^\+?[0-9\s\-]*$/;
+            var isphone = e164Regex.test(phone);
 
-            if(!vnPhoneRegex.test(cleanPhone)){
+            if(isphone == false){
                 alert("Please re-enter your phone number!");
                 isValid = false;
             } else if(email == ''){ 
@@ -372,12 +382,6 @@
             }
 
             if(isValid) {
-
-                let normalizedPhone = cleanPhone;
-                if (normalizedPhone.startsWith('0')) {
-                    normalizedPhone = '+84' + normalizedPhone.slice(1);
-                }
-
                 var contactInfo = {
                 name: name,
                 phone: phone,
