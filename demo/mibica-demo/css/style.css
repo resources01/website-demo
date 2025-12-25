@@ -695,6 +695,12 @@ h4 {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 }
 
+.why-choose {
+    background-color: #fffaf2;
+    border: solid 1px #ebe2d0;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
 .about .bg-light {
     background-color: #eed5a8;
     border: solid 1px #e3ca9c;
