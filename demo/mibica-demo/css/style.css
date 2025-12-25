@@ -207,7 +207,7 @@ body {
 }
 
 .page-header {
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(53, 35, 4, .6), rgba(53, 35, 4, .6)), url(../img/mibica-commodities-banner-bg-about.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -219,6 +219,16 @@ body {
 .page-header .breadcrumb-item a {
     font-size: 18px;
     color: var(--light);
+}
+
+.breadcrumb-item.active {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.breadcrumb-item:hover {
+    color: #ffffff !important;
+    font-weight: 700;
 }
 
 
@@ -672,10 +682,36 @@ h4 {
     border-color: #e7be74;
 }
 
-.back-to-top:hover {
+.back-to-top:hover,
+.back-to-top:focus {
     color: #e6c99c;
     background-color: #472c1a;
     border-color: #e6c99c;
+}
+
+.about .why-choose {
+    background-color: #fffaf2;
+    border: solid 1px #dbd0b9;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.about .bg-light {
+    background-color: #eed5a8;
+    border: solid 1px #e3ca9c;
+}
+
+.bg-about-2 {
+    background-color: #f1d8aa;
+    border: solid 1px #dbd0b9;
+}
+
+.btn-link-info {
+    color: #472c1a;
+}
+
+.btn-link-info:hover {
+    color: #472c1a;
+    font-weight: 700;
 }
 
 @media (min-width: 1200px) {
