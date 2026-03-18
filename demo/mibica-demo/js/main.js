@@ -73,6 +73,106 @@
             '<i class="bi bi-chevron-right"></i>'
         ]
     });
+    
+    //togle read more
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll('.toggle-btn');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const p = this.parentElement.querySelector('p');
+
+                p.classList.toggle('expanded');
+
+                if (p.classList.contains('expanded')) {
+                    this.innerHTML = '<i class="fa fa-minus text-primary me-2"></i>Hidden';
+                } else {
+                    this.innerHTML = '<i class="fa fa-plus text-primary me-2"></i>Read More';
+                }
+            });
+        });
+    });
+
+    window.addEventListener("scroll", function () {
+        document.querySelectorAll('.why-choose p.expanded').forEach(p => {
+            p.classList.remove('expanded');
+
+            const btn = p.parentElement.querySelector('.toggle-btn');
+            if (btn) {
+                btn.innerHTML = '<i class="fa fa-plus text-primary me-2"></i>Read More';
+            }
+        });
+    });
+
+    // Khi click vào link có href bắt đầu bằng #
+    document.addEventListener("DOMContentLoaded", function () {
+
+    // ===== CLICK TRONG TRANG =====
+    document.querySelectorAll('.team-text a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            const target = document.querySelector(targetId);
+
+            if (!target) return;
+
+            // Ẩn hết
+            document.querySelectorAll('.profile .row[id]').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Hiện đúng section
+            target.classList.add('active');
+
+            // Scroll mượt
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    });
+
+    const hash = window.location.hash;
+
+        if (hash) {
+            const target = document.querySelector(hash);
+
+            if (target) {
+                document.querySelectorAll('.profile .row[id]').forEach(section => {
+                    section.classList.remove('active');
+                });                
+                target.classList.add('active');
+                setTimeout(() => {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 200);
+            }
+        }
+
+    });
+
+    let scrollTimeout;
+
+    window.addEventListener("scroll", function () {
+        clearTimeout(scrollTimeout);
+
+        scrollTimeout = setTimeout(() => {
+            const profile = document.querySelector('.profile');
+            if (!profile) return;
+            const rect = profile.getBoundingClientRect();
+            if (rect.bottom < 0 || rect.top > window.innerHeight) {
+                document.querySelectorAll('.profile .row[id]').forEach(section => {
+                    section.classList.remove('active');
+                });
+            }
+        }, 150);
+    });
+
+
+
 
     
 })(jQuery);
