@@ -209,6 +209,22 @@ body {
 .page-header {
     background: linear-gradient(rgba(53, 35, 4, .6), rgba(53, 35, 4, .6)), url(../img/mibica-commodities-banner-bg-about.jpg) center center no-repeat;
     background-size: cover;
+    background-position: 0% 60%;
+}
+
+.page-header.tobacco {
+    background: linear-gradient(rgba(53, 35, 4, .6), rgba(53, 35, 4, .6)), url(../img/mibica-commodities-banner-bg-tobacco.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header.rubber {
+    background: linear-gradient(rgba(53, 35, 4, .6), rgba(53, 35, 4, .6)), url(../img/mibica-commodities-banner-bg-rubber.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header.coffee {
+    background: linear-gradient(rgba(53, 35, 4, .6), rgba(53, 35, 4, .6)), url(../img/mibica-commodities-banner-bg-coffee.jpg) center center no-repeat;
+    background-size: cover;
 }
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
