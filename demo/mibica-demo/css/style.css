@@ -665,6 +665,33 @@ h4 {
     font-family: sans-serif;
 }
 
+.form-floating>.form-select {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.form-select {
+    color: #282726;
+}
+
+.form-select option {
+    color: #242424;
+    background-color: #fdf5e6;
+}
+
+.form-select option:hover,
+.form-select option:checked {
+    color: #242424 !important;
+    background-color: #fdf5e6 !important;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: #9ac79c;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgb(177 142 80);
+}
+
 .bg-light {
     background-color: #e7be74db !important;
 }

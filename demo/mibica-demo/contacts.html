@@ -122,42 +122,56 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <p class="fs-5 fw-bold text-primary">Contact Us</p>
-                    <h1 class="display-5 mb-5 font-sans">If You Have Any Query, Please Contact Us</h1>
+                    <h1 class="display-5 mb-5 font-sans">If You Have Any Query<br> Please Contact Us</h1>
                     <p class="mb-4"></p>
                     <form id="contact-form">
                         <div class="row g-3">
-                            <div class="col-md-6">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="gname" name="name" placeholder="Your Name" required>
-                                    <label for="gname">Your Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                                    <label for="name">Full Name</label>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="gmail" name="email" placeholder="Your Email" required>
-                                    <label for="gmail">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Work Email" required>
+                                    <label for="email">Work Email</label>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-sm-12">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control " id="phone" name="phone" placeholder="Your Mobile" required>
-                                    <label for="phone">Your Mobile</label>
+                                    <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" required>
+                                    <label for="company">Company Name</label>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
+                            </div>                              
+                            <div class="col-sm-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control " id="service" name="service" placeholder="Service Type">
-                                        <label for="service">Service Type</label>
+                                    <input type="text" class="form-control" id="region" name="region" placeholder="Country/Region">
+                                    <label for="region">Country/Region</label>
+                                </div>
+                            </div>                             
+                            <div class="col-sm-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="" selected disabled>--- Product of Interest ---</option>
+                                        <option value="Tobacco">Tobacco</option>
+                                        <option value="Rubber">Natural Rubber</option>
+                                        <option value="Coffee">Coffee</option>
+                                    </select>                                        
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
+                                    <label for="message">Inquiry Details</label>
                                 </div>
                             </div>
+                            <p class="small text-muted">
+                                <strong>Your data is handled securely.</strong> 
+                                Expect a response from our trade specialists within 24 business hours.
+                            </p>
                             <div class="col-12">
-                                <button class="btn btn-primary-custom" type="submit">Send Message</button>
+                                <button class="btn btn-primary-custom" type="submit">Request a Custom Quote</button>
                             </div>
                         </div>
                     </form>
@@ -254,31 +268,29 @@
             return emailRegex.test(email);
         }
 
-        function validatePhone(phone){
-            const phoneRegex = /^(\+1\s?)?(\(?\d{3}\)?)[\s.-]?\d{3}[\s.-]?\d{4}$/;
-            return phoneRegex.test(phone);
-        }
-
         document.getElementById("contact-form").addEventListener("submit", function(event){
 
             event.preventDefault();
 
-            let email = document.querySelector('input[name="email"]').value.trim();
-            let phone = document.querySelector('input[name="phone"]').value.trim();
+            let email = document.getElementById("email").value.trim();
+            let service = document.getElementById("service").value;
 
+            // Validate email
             if(!validateEmail(email)){
                 alert("Please enter a valid email address.");
                 return;
             }
 
-            if(phone && !validatePhone(phone)){
-                alert("Please enter a valid US phone number.");
+            // Validate product select
+            if(service === ""){
+                alert("Please select a product of interest.");
                 return;
             }
 
+            // Send Email
             emailjs.sendForm(
-                'service_4drmotn',
-                'template_fxt9ejj',
+                "service_4drmotn",
+                "template_fxt9ejj",
                 this
             ).then(function(){
 
@@ -288,10 +300,18 @@
             }, function(error){
 
                 alert("Failed to send message. Please try again.");
+                console.error(error);
 
             });
 
         });
+
+        let btn = document.querySelector("button[type='submit']");
+        btn.disabled = true;
+        btn.innerText = "Sending...";
+
+        btn.disabled = false;
+        btn.innerText = "Request a Custom Quote";
     </script>
 </body>
 
