@@ -55,7 +55,7 @@
                     </div>
                     <div class="h-100 d-inline-flex align-items-center font-14">
                         <span class="far fa-envelope me-2"></span>
-                        <a class="btn-link-info" href="mailto:vanhung.dang@mibica.vn">vanhung.dang@mibica.vn</a>
+                        <a class="btn-link-info" href="mailto:info@mibica.vn">info@mibica.vn</a>
                     </div>
                 </div>
                 <div class="col-lg-5 px-5 text-end">
@@ -92,7 +92,7 @@
                             <a href="coffee-products.html" class="dropdown-item">Coffee</a>                        
                         </div>
                     </div>
-                    <a href="news.html" class="nav-item nav-link">NEWS</a>
+                    <a href="activity.html" class="nav-item nav-link">Activity</a>   
                 </div>
                 <a  href="contacts.html" class="btn-contact d-none d-lg-block active">Contacts<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
@@ -128,19 +128,20 @@
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="form-floating">
+                                    <input type="text" name="website" id="website" style="display:none">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
                                     <label for="name">Full Name</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Work Email" required>
-                                    <label for="email">Work Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                    <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" required>
+                                    <input type="text" class="form-control" id="company" name="company" placeholder="Company Name">
                                     <label for="company">Company Name</label>
                                 </div>
                             </div>                              
@@ -152,7 +153,7 @@
                             </div>                             
                             <div class="col-sm-12">
                                 <div class="form-floating">
-                                    <select class="form-select" id="service" name="service" required>
+                                    <select class="form-select" id="service" name="service">
                                         <option value="" selected disabled>--- Product of Interest ---</option>
                                         <option value="Tobacco">Tobacco</option>
                                         <option value="Rubber">Natural Rubber</option>
@@ -162,7 +163,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
                                     <label for="message">Inquiry Details</label>
                                 </div>
                             </div>
@@ -171,7 +172,7 @@
                                 Expect a response from our trade specialists within 24 business hours.
                             </p>
                             <div class="col-12">
-                                <button class="btn btn-primary-custom" type="submit">Request a Custom Quote</button>
+                                <button class="btn btn-primary-custom" type="submit">Connect With Our Team</button>
                             </div>
                         </div>
                     </form>
@@ -198,7 +199,7 @@
                     <h4 class="text-brown mb-4">Our Office</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>29 Ho Van Dai St, Bien Hoa, Dong Nai, VietNam</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a class="btn-link-info" href="tel:+84962753841">096 275 38 41</a></p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a class="btn-link-info" href="mailto:vanhung.dang@mibica.vn">vanhung.dang@mibica.vn</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a class="btn-link-info" href="mailto:info@mibica.vn">info@mibica.vn</a></p>
                     <div class="d-flex pt-2">                        
                         <a class="btn btn-square btn-outline-light rounded-sm me-2" href="https://www.facebook.com/Mibica.Commodities/"><i class="fab fa-facebook-f"></i></a>                     
                         <a class="btn btn-square btn-outline-light rounded-sm me-2" href="https://www.linkedin.com/company/mibica-commodities/"><i class="fab fa-linkedin-in"></i></a>
@@ -207,15 +208,23 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-brown mb-4">Services</h4>
-                    <a class="btn btn-link" href="coffee-products.html">Coffee</a>
                     <a class="btn btn-link" href="tobacco-products.html">Tobacco</a>
                     <a class="btn btn-link" href="rubber-products.html">Natural Rubber</a>
+                    <a class="btn btn-link" href="coffee-products.html">Coffee</a>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6">              
                     <h4 class="text-brown mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="about-us.html">About Us</a>
-                    <a class="btn btn-link" href="contacts.html">Contact Us</a>
-                    <a class="btn btn-link" href="news.html">News</a>                    
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <a class="btn btn-link" href="about-us.html">About Us</a>
+                            <a class="btn btn-link" href="contacts.html">Contact Us</a>
+                            <a class="btn btn-link" href="activity.html">Activity</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
+                            <a class="btn btn-link" href="cookie-policy.html">Cookie Policy</a>
+                        </div>    
+                    </div>                                       
                 </div>
             </div>
         </div>
@@ -227,12 +236,7 @@
     <div class="container-fluid copyright py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="" href="#">Mibica Commodities</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">                    
-                    Designed By <a target="_blank" href="https://Websitene.com">Websitene</a>
-                </div>
+                <div class="col-md-12 text-center mb-3 mb-md-0">&copy; 2026 <a href="index.html">Mibica Commodities</a>, All Rights Reserved.</div>
             </div>
         </div>
     </div>
@@ -263,17 +267,37 @@
             emailjs.init("Bayz4U3jiMtbDP03R"); 
         })();
 
+        // Delay timer start
+        let startTime = new Date().getTime();
+
         function validateEmail(email){
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
         }
 
-        document.getElementById("contact-form").addEventListener("submit", function(event){
+        document.getElementById("contact-form")
+        .addEventListener("submit", function(event){
 
             event.preventDefault();
 
             let email = document.getElementById("email").value.trim();
             let service = document.getElementById("service").value;
+            let website = document.getElementById("website").value;
+
+            // Honeypot check
+            if(website !== ""){
+                console.log("Spam blocked (honeypot)");
+                return;
+            }
+
+            // Delay check
+            let now = new Date().getTime();
+            let seconds = (now - startTime) / 1000;
+
+            if(seconds < 3){
+                alert("Please wait a few seconds before submitting.");
+                return;
+            }
 
             // Validate email
             if(!validateEmail(email)){
@@ -281,15 +305,19 @@
                 return;
             }
 
-            // Validate product select
+            // Validate select
             if(service === ""){
                 alert("Please select a product of interest.");
                 return;
             }
 
-            // Send Email
+            let btn = document.querySelector("button[type='submit']");
+
+            btn.disabled = true;
+            btn.innerText = "Sending...";
+
             emailjs.sendForm(
-                "service_4drmotn",
+                "service_lbgkfwp",
                 "template_fxt9ejj",
                 this
             ).then(function(){
@@ -297,21 +325,23 @@
                 alert("Message sent successfully!");
                 document.getElementById("contact-form").reset();
 
+                btn.disabled = false;
+                btn.innerText = "Request a Custom Quote";
+
+                // reset delay timer
+                startTime = new Date().getTime();
+
             }, function(error){
 
-                alert("Failed to send message. Please try again.");
+                alert("Failed to send message.");
                 console.error(error);
+
+                btn.disabled = false;
+                btn.innerText = "Request a Custom Quote";
 
             });
 
         });
-
-        let btn = document.querySelector("button[type='submit']");
-        btn.disabled = true;
-        btn.innerText = "Sending...";
-
-        btn.disabled = false;
-        btn.innerText = "Request a Custom Quote";
     </script>
 </body>
 

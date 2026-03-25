@@ -227,6 +227,18 @@ body {
     background-size: cover;
 }
 
+.page-header.policy {
+    background: linear-gradient(rgba(53, 35, 4, .6), rgba(53, 35, 4, .6)), url(../img/mibica-commodities-banner-bg-policy.jpg) center center no-repeat;
+    background-size: cover;
+    background-position: 0% 75%;
+}
+
+.page-header.cookie {
+    background: linear-gradient(rgba(53, 35, 4, .6), rgba(53, 35, 4, .6)), url(../img/mibica-commodities-banner-bg-cookie.jpg) center center no-repeat;
+    background-size: cover;
+    background-position: 0% 65%;
+}
+
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
@@ -626,7 +638,6 @@ body {
     transition: .5s;
     padding: 10px 18px;
     border-radius: 5px;
-    text-transform: uppercase;
 }
 
 .btn-primary-custom:hover {
@@ -655,6 +666,16 @@ h4 {
 
 .text-desc-bold b {
     color: #5c5c5c;
+}
+
+p a {
+    color: #d39119;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: #493105;
+    text-decoration: underline;
 }
 
 .text-desc-banner {
@@ -843,6 +864,24 @@ h4 {
 @media (min-width: 1200px) {
     .display-5 {
         font-size: 2.5rem;
+    }
+
+    .display-55 {
+        font-size: 2rem;
+    }
+
+    .display-6 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .display-5 {
+        font-size: 2.5rem;
+    }
+
+    .display-55 {
+        font-size: 1.6rem;
     }
 
     .display-6 {
