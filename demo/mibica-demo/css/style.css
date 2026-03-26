@@ -239,6 +239,12 @@ body {
     background-position: 0% 65%;
 }
 
+.page-header.use {
+    background: linear-gradient(rgba(53, 35, 4, .6), rgba(53, 35, 4, .6)), url(../img/mibica-commodities-banner-bg-terms-of-use.jpg) center center no-repeat;
+    background-size: cover;
+    background-position: 0% 65%;
+}
+
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
@@ -552,7 +558,7 @@ body {
 
 .footer .btn.btn-link:hover {
     color: var(--primary);
-    letter-spacing: 1px;
+    font-weight: 700;
     box-shadow: none;
 }
 
@@ -572,6 +578,11 @@ body {
 /*** NEW STYLES ***/
 .logo-header {
     height: 55px;
+    width: auto;
+}
+
+.logo-footer {
+    height: 80px;
     width: auto;
 }
 
@@ -678,6 +689,11 @@ p a:hover {
     text-decoration: underline;
 }
 
+.bg-footer p a:hover {
+    color: #493105;
+    text-decoration: none;
+}
+
 .text-desc-banner {
     font-size: 24px;
     color: #ffffff;
@@ -729,8 +745,9 @@ p a:hover {
     font-size: 18px !important;
 }
 
-/* .bg-footer {
-    background-color: #e7be74d4 !important;
+/* .bg-footer a
+.bg-footer p {
+    font-size: 14px;
 } */
 
 .text-brown {
@@ -848,6 +865,14 @@ p a:hover {
 
 .profile .row.active {
     animation: fadeIn 0.5s ease;
+}
+
+.top-feature span {
+    font-size: 14px;
+}
+
+.top-feature h4 {
+    font-size: 1.2rem;
 }
 
 @keyframes fadeIn {
