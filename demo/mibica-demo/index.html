@@ -44,6 +44,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lcz0ZgsAAAAAIiASXRsX-W_Z-GG801pJ8TfdUAX"></script>
 </head>
 
 <body>
@@ -510,7 +512,7 @@
                                 <p class="small text-muted">
                                     <strong>Your data is handled securely.</strong> 
                                     Expect a response from our trade specialists within 24 business hours.
-                                </p>
+                                </p>                              
                                 <div class="col-12 text-center pt-2 pt-md-4">
                                     <button class="btn btn-primary-custom" type="submit">Connect With Our Team</button>
                                 </div>                           
@@ -579,9 +581,9 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a class="btn-link-info" href="tel:+84962753841">096 275 38 41</a></p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i><a class="btn-link-info" href="mailto:info@mibica.vn">info@mibica.vn</a></p>
                     <div class="d-flex pt-2">                        
-                        <a class="btn btn-square btn-outline-light rounded-sm me-2" href="https://www.facebook.com/Mibica.Commodities/"><i class="fab fa-facebook-f"></i></a>                     
-                        <a class="btn btn-square btn-outline-light rounded-sm me-2" href="https://www.linkedin.com/company/mibica-commodities/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-sm me-2" href="https://api.whatsapp.com/send/?phone=84962753841&text=Hello+MIBICA+Team%2C+I+have+a+question&type=phone_number&app_absent=0"><i class="fab fa-whatsapp fw-bold "></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-sm me-2" target="_blank" href="https://www.facebook.com/Mibica.Commodities/"><i class="fab fa-facebook-f"></i></a>                     
+                        <a class="btn btn-square btn-outline-light rounded-sm me-2" target="_blank" href="https://www.linkedin.com/company/mibica-commodities/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-sm me-2" target="_blank" href="https://api.whatsapp.com/send/?phone=84962753841&text=Hello+MIBICA+Team%2C+I+have+a+question&type=phone_number&app_absent=0"><i class="fab fa-whatsapp fw-bold "></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -696,28 +698,51 @@
             btn.disabled = true;
             btn.innerText = "Sending...";
 
-            emailjs.sendForm(
-                "service_lbgkfwp",
-                "template_fxt9ejj",
-                this
-            ).then(function(){
+            grecaptcha.ready(function(){
 
-                alert("Message sent successfully!");
-                document.getElementById("contact-form").reset();
+                grecaptcha.execute(
+                    "6Lcz0ZgsAAAAAIiASXRsX-W_Z-GG801pJ8TfdUAX",
+                    {action: "submit"}
+                )
+                .then(function(token){
 
-                btn.disabled = false;
-                btn.innerText = "Request a Custom Quote";
+                    let captchaInput =
+                        document.createElement("input");
 
-                // reset delay timer
-                startTime = new Date().getTime();
+                    captchaInput.type = "hidden";
+                    captchaInput.name = "g-recaptcha-response";
+                    captchaInput.value = token;
 
-            }, function(error){
+                    document
+                        .getElementById("contact-form")
+                        .appendChild(captchaInput);
 
-                alert("Failed to send message.");
-                console.error(error);
+                    emailjs.sendForm(
+                        "service_lbgkfwp",
+                        "template_fxt9ejj",
+                        "#contact-form"
+                    ).then(function(){
 
-                btn.disabled = false;
-                btn.innerText = "Request a Custom Quote";
+                        alert("Message sent successfully!");
+                        document.getElementById("contact-form").reset();
+
+                        btn.disabled = false;
+                        btn.innerText = "Request a Custom Quote";
+
+                        // reset delay timer
+                        startTime = new Date().getTime();
+
+                    }, function(error){
+
+                        alert("Failed to send message.");
+                        console.error(error);
+
+                        btn.disabled = false;
+                        btn.innerText = "Request a Custom Quote";
+
+                    });
+
+                });
 
             });
 
