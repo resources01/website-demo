@@ -647,6 +647,28 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            let captchaShown = false;
+            let inputs = document.querySelectorAll(
+                "#contact-form input, #contact-form textarea, #contact-form select"
+            );
+
+            inputs.forEach(function(input) {
+                input.addEventListener("focus", function () {
+
+                    if (!captchaShown) {
+                        document.getElementById("captcha-container").style.display = "block";
+                        captchaShown = true;
+                    }
+
+                });
+            });
+
+        });
+    </script>
+
+    <script>
         (function(){
             emailjs.init("Bayz4U3jiMtbDP03R"); 
         })();

@@ -155,7 +155,7 @@
                             <div class="col-sm-12">
                                 <div class="form-floating">
                                     <select class="form-select" id="service" name="service">
-                                        <option value="" selected disabled>--- Product of Interest ---</option>
+                                        <option value="" selected disabled>Product of Interest</option>
                                         <option value="Tobacco">Tobacco</option>
                                         <option value="Rubber">Natural Rubber</option>
                                         <option value="Coffee">Coffee</option>
@@ -172,7 +172,11 @@
                                 <strong>Your data is handled securely.</strong> 
                                 Expect a response from our trade specialists within 24 business hours.
                             </p>
-                            <div class="g-recaptcha" data-sitekey="6Lc0H5ksAAAAACqh_eXCutWUd5z-oMYWZ7WDP-zJ"></div>
+                            <div id="captcha-container" style="display:none;">
+                                <div class="g-recaptcha" 
+                                    data-sitekey="6Lc0H5ksAAAAACqh_eXCutWUd5z-oMYWZ7WDP-zJ">
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <button class="btn btn-primary-custom" type="submit">Connect With Our Team</button>
                             </div>
@@ -265,6 +269,28 @@
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            let captchaShown = false;
+            let inputs = document.querySelectorAll(
+                "#contact-form input, #contact-form textarea, #contact-form select"
+            );
+
+            inputs.forEach(function(input) {
+                input.addEventListener("focus", function () {
+
+                    if (!captchaShown) {
+                        document.getElementById("captcha-container").style.display = "block";
+                        captchaShown = true;
+                    }
+
+                });
+            });
+
+        });
+    </script>
 
     <script>
         (function(){
